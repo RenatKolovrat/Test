@@ -25,17 +25,45 @@ img{
     width: 100%;
 }
 
+button{
+    padding: 0;
+}
+
 button,
 button:active,
 button:focus{
     outline: none;
-    padding: 0;
     border: none;
 }
 
 a{
     color: #000;
     text-decoration: none;
+}
+
+.button_load{
+    display: flex;
+    justify-content: center;
+}
+
+.load_more{
+    padding: 10px 25px;
+
+    font-family: 'Roboto Bold', arial;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+
+    background-color: #959595;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.load_more:hover{
+    background-color: #727272;
 }
 
 .container{
