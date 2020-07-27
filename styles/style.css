@@ -25,8 +25,17 @@ img{
     width: 100%;
 }
 
-button{
+button,
+button:active,
+button:focus{
+    outline: none;
     padding: 0;
+    border: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
 }
 
 .container{
@@ -117,7 +126,7 @@ button{
     top: 50%;
     z-index: 10;
     font-size: 0;
-    width: 26px;
+    width: 50px;
     height: 50px;
     border: none;
     outline: none;
@@ -126,19 +135,24 @@ button{
 /* Стрелка влево */
 .slick-arrow.slick-prev{
     left: 0;
-    background: url(../images/Prev.svg) 0 0 / 100% no-repeat;
+    background: url(../images/Prev.svg) 0 0 /100 center no-repeat;
 }
 /* Стрелка вправо */
 .slick-arrow.slick-next{
     right: 0;
-    background: url(../images/Next.svg) 0 0 / 100% no-repeat;
+    background: url(../images/Next.svg) 0 0 /100 center no-repeat;
 }
 /* Стрелка не активная */
-.slick-arrow.slick-disabled{}
+.slick-arrow.slick-disabled{
+    opacity: 0.5;
+}
 
 
 /* Точки (булиты) */
 .slick-dots{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,14 +160,113 @@ button{
 
 .slick-dots li{
     list-style: none;
+    margin: 0 7px;
 }
 /* Активная точка */
-.slick-dots li.slick-active{}
+.slick-dots li.slick-active button{
+    border: 3px solid black;
+}
 /* Элемент точки */
 .slick-dots li button{
     font-size: 0;
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    background-color: #fff;
+}
 
+/*Body*/
+
+.main{
+    background-color: #fafafa;
+    font-family: 'Roboto Bold', arial;
+    font-size: 14px;
+    padding: 30px 0;
+}
+
+.main__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+
+    padding: 15px 0;
+}
+
+.main__link{
+    margin: 0 10px;
+    color: #777;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.main__link:hover{
+    color: #000;
+}
+
+.main__divide{
+    font-size: 30px;
+    color: #dcdcdc;
+}
+
+.main__content{
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.main__column{
+    display: flex;
+
+    width: 33%;
+    height: 100%;
+
+    align-items: center;
+    
+    flex-direction: column;
+}
+
+.column__item{
+    display: block;
+    position: relative;
+    margin: 15px 0;
+}
+
+.column__item:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+}
+
+.plus{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    font-size: 100px;
+    font-weight: 100;
+    color: #fff;
+    opacity: 0;
+}
+
+.column__item:hover:after{
+    opacity: 0.5;
+}
+
+.column__item:hover .plus{
+    opacity: 0.8;
+    z-index: 10;
 }

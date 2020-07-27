@@ -1,5 +1,9 @@
 $(document).ready(function () {
     $('.slider').slick({
-        dots: true
+        dots: true,
+        draggable: false,
+        infinite: false,
+        autoplay: true,
+        autoplaySpeed: 2900
     });
 });
