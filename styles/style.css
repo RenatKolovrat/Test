@@ -252,6 +252,7 @@ a{
 .main__link{
     margin: 0 10px;
     color: #777;
+    font-size: 7px;
     font-weight: 600;
 
     text-transform: uppercase;
