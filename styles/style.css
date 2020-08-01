@@ -398,7 +398,10 @@ a{
 
 @media(max-width:767px){
 
-        
+    body.lock{
+        overflow: hidden;
+    }   
+    
     .header{
 
         height: 60px;
@@ -497,6 +500,7 @@ a{
         position: relative;
         margin-top: 60px;
         width: 100%;
+        border: none;
     }
 
     .main__header{
