@@ -407,7 +407,7 @@ a{
     .header__burger{
         display: block;
         position: relative;
-        margin-right: 10px;
+        margin-right: 20px;
         width: 30px;
         height: 20px;
         z-index: 3;
